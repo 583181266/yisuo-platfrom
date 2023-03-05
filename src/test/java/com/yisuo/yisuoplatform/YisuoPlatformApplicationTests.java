@@ -1,10 +1,10 @@
-package com.yisuo.yisuoplatfrom;
+package com.yisuo.yisuoplatform;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class YisuoPlatfromApplicationTests {
+class YisuoPlatformApplicationTests {
 
     @Test
     void contextLoads() {
