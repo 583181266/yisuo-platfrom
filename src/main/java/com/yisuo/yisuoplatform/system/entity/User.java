@@ -65,6 +65,9 @@ public class User extends BaseEntity{
     @Column
     private Date birthday;
 
+    @Column
+    private Integer age;
+
     /**
      * 状态 用户状态--1-正常 2-禁用
      */

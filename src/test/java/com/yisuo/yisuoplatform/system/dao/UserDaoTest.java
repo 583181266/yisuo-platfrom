@@ -24,10 +24,11 @@ class UserDaoTest {
         user.setUsername("张三");
         user.setPassword("123456");
         user.setGender((short)0);
-        user.setIdCard("11111112235453435443");
-        user.setEmail("28377462487@qq.com");
-        user.setPhone("12345324534");
+        user.setIdCard("1234567899877654321");
+        user.setEmail("446666@qq.com");
+        user.setPhone("134566543333");
         user.setBirthday(new Date());
+        user.setAge(18);
         user.setStatus((short)0);
         user.setLastLogin(new Date());
         user.setCreateBy(0);
