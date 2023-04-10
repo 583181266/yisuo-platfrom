@@ -69,4 +69,10 @@ class UserDaoTest {
     void logicDeleteById() {
         userDao.logicDeletedById(2);
     }
+
+    @Test
+    void testFindByUsername(){
+        User user = userDao.findByUsername("张三");
+        System.out.println(user);
+    }
 }

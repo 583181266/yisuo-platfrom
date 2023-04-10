@@ -1,6 +1,7 @@
 package com.yisuo.yisuoplatform.system.dao;
 
 import com.yisuo.yisuoplatform.system.entity.BaseEntity;
+import com.yisuo.yisuoplatform.system.entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
@@ -31,4 +32,7 @@ public interface BaseDao<T extends BaseEntity> extends JpaRepository<T,Integer> 
     @Modifying
     @Transactional(rollbackFor = Exception.class)
     void logicDeletedById(Integer id);
+
+    @Transactional(readOnly = true)
+    User findByUsername(String username);
 }

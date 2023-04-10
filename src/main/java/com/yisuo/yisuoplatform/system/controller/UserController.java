@@ -3,6 +3,7 @@ package com.yisuo.yisuoplatform.system.controller;
 import com.yisuo.yisuoplatform.system.entity.Result;
 import com.yisuo.yisuoplatform.system.entity.User;
 import com.yisuo.yisuoplatform.system.service.UserService;
+import com.yisuo.yisuoplatform.system.utils.JWTUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
 
@@ -45,6 +46,14 @@ public class UserController {
         log.info("删除用户: {}",id);
         userService.deleteById(id);
         return Result.ok();
+    }
+
+    @PostMapping("/login")
+    public Result<String> login(@RequestBody User user){
+        log.info("用户登录: {}",user);
+        userService.login(user);
+        String token = JWTUtil.generateToken(user.getUsername(), user.getId());
+        return Result.ok(token);
     }
 
 
