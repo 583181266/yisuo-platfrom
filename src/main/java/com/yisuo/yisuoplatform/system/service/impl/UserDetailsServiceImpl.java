@@ -13,7 +13,7 @@ import javax.annotation.Resource;
  * @date 2023/4/5 00:18
  */
 @Service
-public class UserDetailServiceImpl implements UserDetailsService {
+public class UserDetailsServiceImpl implements UserDetailsService {
 
     @Resource
     private UserDao userDao;
